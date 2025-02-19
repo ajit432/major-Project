@@ -1,0 +1,22 @@
+{% extends "students/base.html" %}
+{% block title %}
+Student Login 
+{% endblock title %}
+{% block content %}
+<center>
+    <h1>
+        Student Login Page
+    </h1>
+    <form  method="post">
+        {% csrf_token %}
+
+        <label for="username">username</label>
+        <input type="text" name="username" placeholder="username"><br><br>
+        
+        <label for="Password">Password</label>
+        <input type="text" name="password" placeholder="Password"><br><br>
+        <input type="submit" value="Login">
+    </form>
+</center>
+{% endblock content %}
+

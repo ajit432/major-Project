@@ -1,0 +1,11 @@
+{% extends "students/base.html" %}
+{% block title %} Home  {% endblock title %} 
+{% block content %} 
+<center> 
+    {% if user.is_authenticated %}
+    <h1>Welcome To Student Features Are Coming</h1>
+    {% else %}            
+    <h1>Student Home Page</h1>
+    {% endif %}
+</center>
+{% endblock content %} 

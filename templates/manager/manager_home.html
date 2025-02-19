@@ -1,0 +1,18 @@
+{% extends "Manager/base.html" %}
+
+{% block title %} Manger Home {% endblock title %} 
+{% block content %}
+{% if  user.is_authenticated %}
+<center>
+    <h1>
+       Wlcome To  Manager  as A admin
+    </h1>
+</center>
+{% else %}
+<center>
+    <h1>
+        Manager Home Page
+    </h1>
+</center>
+{% endif %}
+{% endblock content %}
