@@ -22,7 +22,8 @@ def add_employee(request):
 
         if EUFDO.is_valid() and EPFDO.is_valid():
             un= f"{EUFDO.cleaned_data.get('first_name')}{EPFDO.cleaned_data.get('phone')[-4:]}"
-            pw = ''.join([random.choice(string.punctuation) for i in range(1,6)])
+            # pw = ''.join([random.choice(string.punctuation) for i in range(1,6)])
+            pw = ''.join([random.choice(string.ascii_letters) for i in range(1,6)]) # pw is character 
             email = EUFDO.cleaned_data.get('email')
 
             MEUFDO = EUFDO.save(commit=False)
