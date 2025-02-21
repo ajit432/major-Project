@@ -3,9 +3,13 @@
 {% block content %} 
 <center> 
     {% if user.is_authenticated %}
-    <h1>Welcome To Student Features Are Coming</h1>
+    <h1>Welcome To Student Portal</h1>
+    <h1>Hi  {{Student_Object.first_name}} {{Student_Object.last_name}}</h1>
+    <h1>Your Phone No. is : {{Student_Profile_Object.phone}}  </h1>
+    <h1>Your Course is : {{Student_Profile_Object.course}}  </h1>
+    <img src="{{Student_Profile_Object.profile_pic.url}}" alt="No Phtot" style="height: 90px; width: 90px;">
     {% else %}            
     <h1>Student Home Page</h1>
-    {% endif %}
+    {% endif %} 
 </center>
 {% endblock content %} 

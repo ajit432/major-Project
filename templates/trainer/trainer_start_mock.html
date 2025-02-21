@@ -1,0 +1,15 @@
+{% extends "trainer/base.html" %}
+{% block title %}
+Trainer Start Mock
+{% endblock title %}
+{% block   content  %}
+<center>
+    <h1> Start MOCK By Trainer</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{EMRO.as_p}}
+        <input type="submit" value="Add">
+    </form> 
+</center>
+
+{% endblock content    %}

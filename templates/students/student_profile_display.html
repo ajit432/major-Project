@@ -1,0 +1,28 @@
+{% extends "students/base.html" %}
+
+{% block title %}
+Student Display Page
+{% endblock title %}
+
+{% block content %}
+
+<center>
+    {% comment %} <h1>Student Display Profile</h1> {% endcomment %}
+    {% comment %} <h1> Your Name :{{Student_Profile_Object.username.first_name}}</h1>
+<img src="{{Student_Profile_Object.profile_pic.url}}" alt="nooooooooo" style="height: 90px; width: 90px;"> {% endcomment %}
+
+
+<div class="card" style="width: 18rem;">
+    <img src="{{Student_Profile_Object.profile_pic.url}}" class="card-img-top" alt="No Photo">
+    <div class="card-body">
+        <h5 class="card-title">Name : {{Student_Profile_Object.username.first_name}}{{Student_Profile_Object.username.last_name}} </h5>
+        <h5 class="card-title">Phone : {{Student_Profile_Object.phone}}</h5>
+        <h5 class="card-title">Email : {{Student_Profile_Object.username.email}}</h5>
+         
+        <a href="#" class="btn btn-primary">Edit Profile</a>
+        <a href="#" class="btn btn-danger" >Delete</a>
+    </div>
+</div>
+</center>
+
+{% endblock content %}

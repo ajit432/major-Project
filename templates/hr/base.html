@@ -28,6 +28,12 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'hr_logout' %}">Logout</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'hr_set_mock' %}">Set Mock</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'hr_show_student_ratings' %}">Show All MOCK </a>
+              </li>
               {% else %}
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'hr_login' %}">Login</a>

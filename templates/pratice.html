@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Display</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .profile-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .card-title {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .resume-item {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="profile-title">Basic Profile</h2>
+
+    <div class="row g-4">
+        <!-- Address Section -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card title">
+                <span class="card-title">Contact Information</span>
+                <ul class="list-dragger">
+                    <li><span class="card card-title">Email Address</span></li>
+                    <li><span class="card card-title">Phone Number</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Course Section -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card">
+                <h3 class="card-title" id="course">Skills & Education</h3>
+                <ul class="proofreading">
+                    <li><span class="card title"><i class="fas fa-border-code"></i> Coding/Python</span></li>
+                    <li><span class="card title"><i class="fas fa-queue"></i> Machine Learning</span></li>
+                    <li><span class="card title"><i class="fas fa-underline"></i> Data Analysis</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Resume Section -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card">
+                <h3 class="card-title" id="resume">Resume & Statement of Purpose</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="row">
+                        <div class="col">Here is a sample resume:
+                            <p>John Doe, M.S. in Computer Science | Quantitative Analyst | Risk Management firm</p>
+                            <!-- Add more bullet points -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

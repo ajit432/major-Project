@@ -5,4 +5,6 @@ urlpatterns = [
     path('student_register/',student_register, name="student_register"),
     path('student_login/',student_login, name="student_login"),
     path('student_logout/',student_logout, name="student_logout"),
+    path('student_profile_display/',student_profile_display, name="student_profile_display"),
+    path('myratings/',myratings, name="myratings"),
 ]

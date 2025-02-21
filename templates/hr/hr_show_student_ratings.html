@@ -1,0 +1,17 @@
+{% extends "hr/base.html" %}
+{% block title %} 
+hr_show_student_ratings
+{% endblock title %} 
+{% block content %}
+<center>
+    <h1>
+        hr_show_student_rating
+    </h1>
+    {% if ASRO %}
+    {% for student in ASRO  %}
+    <h1>hii <a href="{% url 'hr_show_student_ratings_indi' student.pk %}"> {{student.student.first_name}}</a> subj {{student.subject}}</h1>
+    {% endfor %}
+    {% endif %}
+</center>
+{% endblock content %}
+

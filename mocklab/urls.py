@@ -25,4 +25,4 @@ urlpatterns = [
     path('manager/',include('manager.urls')),
     path('hr/',include('HR.urls')),
     path('trainer/',include('trainer.urls')),
-] + static(settings.MEDIA_URL, documents_root = settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

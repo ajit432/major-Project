@@ -1,0 +1,20 @@
+{% extends "students/base.html" %}
+{% block title %}MY Ratings{% endblock title %}
+{% block content %}
+<center>
+    
+    {% if user.is_authenticated %}
+    {% if SO.students.all %}
+    {% for  rate  in SO.students.all  %}
+    
+    {% comment %} <h1>Rating subject : {{rate.subject}}</h1> {% endcomment %}
+    <h1>subject :{{rate.subject}} & conducted by {{rate.conducted_by.first_name}} & date{{rate.conducted_on}} </h1>
+    {% endfor %}
+    {% else %}
+    <h1>
+        MY rating  Is Coming Soon
+    </h1>
+    {% endif %}
+    {% endif %}
+</center>
+{% endblock content %}

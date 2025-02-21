@@ -7,6 +7,8 @@ from django.core.mail import send_mail
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate,login , logout
 # Create your views here.
+
+
 def manager_home(request):
     return render(request,'manager/manager_home.html')
 
@@ -63,7 +65,7 @@ def manager_login(request):
         manager_password = request.POST.get('password')
         AUO = authenticate(username=manager_username, password = manager_password)
         if AUO  and AUO.is_superuser:
-            request.session['managerusername'] = manager_username
+            request.session['manager_username'] = manager_username
             login(request,AUO)
             # return HttpResponse(' Mnager  Credential is Login')
             return HttpResponseRedirect(reverse('manager_home'))
@@ -74,7 +76,7 @@ def manager_login(request):
 
 def manager_login_required(func):
     def inner(request, *args, **kwargs):
-        un = request.session.get('managerusername')
+        un = request.session.get('manager_username')
         if un :
             return func(request,*args,  **kwargs)
         return HttpResponseRedirect(reverse('manager_home'))

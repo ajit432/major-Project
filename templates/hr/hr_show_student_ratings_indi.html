@@ -1,0 +1,20 @@
+{% extends "hr/base.html" %}
+
+{% block title %} 
+hr_show_student_ratings_indi
+{% endblock title %} 
+{% block content %}
+<center>
+<h1> Individual student ratings </h1>
+<h1>Hey {{ISRO.student.first_name}} {{ISRO.student.last_name}} </h1>
+<h1>YOUR Course is : {{ISRO.subject}} </h1>
+<h1>YOUR Mock Rating of communication is : {{ISRO.communication}} </h1>
+<h1>YOUR Mock Rating of technical is : {{ISRO.technical}} </h1>
+<h1>YOUR Mock Rating of programming is : {{ISRO.programming}} </h1>
+<h1>YOUR Mock Remarks is : {{ISRO.remarks}} </h1>
+<h1>YOUR Mock is conducted by : {{ISRO.conducted_by.first_name}} sir</h1>
+<h1>YOUR Mock is conducted On Date : {{ISRO.conducted_on}} </h1>
+</center>
+{% endblock content %}
+
+
